@@ -1,0 +1,14 @@
+@mixin connect-font($family, $file,  $weight: 400) {
+	@font-face {
+		font-family: $family;
+		font-weight: $weight;
+		font-style: normal;
+		font-display: swap;
+		src: url($file) format("woff2");
+	}
+}
+
+@include connect-font("Inter", "../fonts/inter-400.woff2", 400);
+@include connect-font("Inter", "../fonts/inter-500.woff2", 500);
+@include connect-font("PT Sans", "../fonts/ptsans-400.woff2", 400);
+@include connect-font("PT Sans", "../fonts/ptsans-700.woff2", 700);

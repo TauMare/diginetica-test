@@ -1,0 +1,17 @@
+@use "./fonts";
+@use "./variables.scss" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+body {
+	margin: 0;
+}

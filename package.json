@@ -1,0 +1,53 @@
+{
+	"name": "diginetica-test",
+	"version": "1.0.0",
+	"description": "Сборка в рамках тестового задания",
+	"type": "module",
+	"scripts": {
+		"build": "gulp build",
+		"cache:clear": "gulp clearCache",
+		"editorconfig": "npx editorconfig-cli",
+		"fix:scss": "stylelint \"source/sass/**/*.scss\" --fix",
+		"lint": "npm run editorconfig && gulp lint && npm run stylelint",
+		"stylelint": "stylelint \"source/sass/**/*.scss\"",
+		"start": "gulp"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.29.1",
+		"del": "^7.0.0",
+		"editorconfig-cli": "^0.3.0",
+		"gulp": "^4.0.2",
+		"gulp-cache": "^1.1.3",
+		"gulp-esbuild": "^0.11.1",
+		"gulp-html-bemlinter": "^2.1.3",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-pug": "^5.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sharp-responsive": "^0.4.0",
+		"gulp-stacksvg": "^2.0.1",
+		"gulp-svgmin": "^4.1.0",
+		"gulp-w3c-html-validator": "^5.2.0",
+		"postcss-calc": "^8.2.4",
+		"postcss-csso": "^6.0.1",
+		"postcss-preset-env": "^8.3.2",
+		"postcss-scss": "^4.0.6",
+		"postcss-sort-media-queries": "^5.1.0",
+		"pug-bem": "^1.2.2",
+		"sass": "^1.62.1",
+		"stylelint": "14.16.1",
+		"stylelint-config-htmlacademy": "^1.1.4",
+		"supports-webp": "^3.0.0",
+		"yaml": "^2.2.2"
+	},
+	"volta": {
+		"node": "18.16.0"
+	},
+	"packageManager": "pnpm@8.3.1",
+	"dependencies": {
+		"@fontsource/pt-sans": "^4.5.11"
+	}
+}

@@ -1,0 +1,121 @@
+aside.filters 
+  form(action="#" method="post" target="_blank")._filter
+    ul._category
+      li._category-label
+        p._category-name Название категории
+        p._category-quantity 3
+      li._category-label
+        p._category-name Название категории
+        p._category-quantity 3
+      li._category-label
+        p._category-name Название категории
+        p._category-quantity 3
+      li._category-label.--active
+        p._category-name Название категории
+        p._category-quantity 3
+    fieldset._price
+      legend._title Цена
+      ._price-wrapper 
+        label._price-label(for="min-price")
+          span._pre-input от
+          input._price-input(type="text" value="5 500 ₽" name="min-price" id="min-price") 
+        label._price-label(for="max-price")
+          span._pre-input до
+          input._price-input(type="text" value="5 500 ₽" name="max-price" id="max-price") 
+    fieldset._brand
+      ._title-wrapper 
+        legend._title-brand Бренд
+        button._title-clear(action="#") Очистить
+      ._search-wrapper 
+        input._input(type="text" placeholder="Поиск" id="brand-name")
+        svg._brand-search-icon(role="img" width=16 height=16 aria-hidden="true" fill="currentColor")
+          use(href=`img/stack.svg#find-small`)
+      ._checkbox-container 
+        label._checkbox-wrapper(for="brand1")
+          input._checkbox.page__hidden(type="checkbox" name="brand1" value="Attr1" id="brand1" checked) 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="brand2")
+          input._checkbox.page__hidden(type="checkbox" name="brand2" value="Attr2" id="brand2") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="brand3")
+          input._checkbox.page__hidden(type="checkbox" name="brand3" value="Attr3" id="brand3") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="brand4")
+          input._checkbox.page__hidden(type="checkbox" name="brand4" value="Attr4" id="brand4") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="brand5")
+          input._checkbox.page__hidden(type="checkbox" name="brand5" value="Attr5" id="brand5") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="brand6")
+          input._checkbox.page__hidden(type="checkbox" name="brand6" value="Attr6" id="brand6") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+    fieldset._size
+      legend._title Размер
+      ._checkbox-container 
+        label._checkbox-wrapper(for="size1")
+          input._checkbox.page__hidden(type="checkbox" name="size1" value="Attr1" id="size1") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="size2")
+          input._checkbox.page__hidden(type="checkbox" name="size2" value="Attr2" id="size2") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="size3")
+          input._checkbox.page__hidden(type="checkbox" name="size3" value="Attr3" id="size3") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="size4")
+          input._checkbox.page__hidden(type="checkbox" name="size4" value="Attr4" id="size4") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="size5")
+          input._checkbox.page__hidden(type="checkbox" name="size5" value="Attr5" id="size5") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+        label._checkbox-wrapper(for="size6")
+          input._checkbox.page__hidden(type="checkbox" name="size6" value="Attr6" id="size6") 
+          span._custom
+            svg._tick(width=20 height=20 aria-hidden="true")
+              use(href="img/stack.svg#checkbox")
+          span._checkbox-label Атрибут
+          span._checkbox-quantity 3
+  

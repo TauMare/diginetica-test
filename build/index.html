@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diginetica test task</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preload" href="fonts/inter-400.woff2" as="font">
+    <link rel="preload" href="fonts/inter-500.woff2" as="font">
+    <link rel="preload" href="fonts/ptsans-400.woff2" as="font">
+    <link rel="preload" href="fonts/ptsans-700.woff2" as="font">
+  </head>
+  <body class="page__body">
+    <header class="header"><a class="header__logo" href="index.html">Логотип
+        <svg class="header__logo-icon" role="img" width="24" height="24" aria-hidden="true" fill="currentColor">
+          <use href="img/stack.svg#logo"></use>
+        </svg></a><a class="header__catalog-cta" href="catalog.html">Каталог</a>
+      <form class="header__search" action="#" method="post" target="_blank">
+        <svg class="header__search-icon" role="img" width="24" height="24" aria-hidden="true" fill="currentColor">
+          <use href="img/stack.svg#find"> </use>
+        </svg>
+        <input class="header__search-input" type="text" name="catalog" placeholder="Поиск по 100 000 товаров ">
+      </form>
+      <ul class="header__navigation">
+        <li class="header__navigation-item"><a class="header__link" href="info.html">Информация о компании</a></li>
+        <li class="header__navigation-item"><a class="header__link" href="contacts.html">Контакты	</a></li>
+        <li class="header__navigation-item"><a class="header__link" href="links.html">Полезные ссылки</a></li>
+      </ul>
+      <form class="header__form-mobile" action="#" method="post" target="_blank">
+        <button class="header__return-mobile">Вернуться назад
+          <svg class="header__return-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <use href="img/stack.svg#back"></use>
+          </svg>
+        </button>
+        <input class="header__input-mobile" type="text" name="catalog" placeholder="Запрос">
+        <button class="header__clear-mobile">Стереть запрос
+          <svg class="header__clear-icon-mobile" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <use href="img/stack.svg#clear"></use>
+          </svg>
+        </button>
+        <button class="header__search-mobile">Найти</button>
+      </form>
+      <div class="header__navigation-mobile"> 
+        <h3 class="header__category">Название категории</h3>
+      </div>
+    </header>
+    <main class="page__main">
+      <h1 class="page__hidden">Страница каталога.</h1>
+      <aside class="filters"> 
+        <form class="filters__filter" action="#" method="post" target="_blank">
+          <ul class="filters__category">
+            <li class="filters__category-label">
+              <p class="filters__category-name">Название категории</p>
+              <p class="filters__category-quantity">3</p>
+            </li>
+            <li class="filters__category-label">
+              <p class="filters__category-name">Название категории</p>
+              <p class="filters__category-quantity">3</p>
+            </li>
+            <li class="filters__category-label">
+              <p class="filters__category-name">Название категории</p>
+              <p class="filters__category-quantity">3</p>
+            </li>
+            <li class="filters__category-label filters__category-label--active">
+              <p class="filters__category-name">Название категории</p>
+              <p class="filters__category-quantity">3</p>
+            </li>
+          </ul>
+          <fieldset class="filters__price">
+            <legend class="filters__title">Цена</legend>
+            <div class="filters__price-wrapper"> 
+              <label class="filters__price-label" for="min-price"><span class="filters__pre-input">от</span>
+                <input class="filters__price-input" type="text" value="5 500 ₽" name="min-price" id="min-price">
+              </label>
+              <label class="filters__price-label" for="max-price"><span class="filters__pre-input">до</span>
+                <input class="filters__price-input" type="text" value="5 500 ₽" name="max-price" id="max-price">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filters__brand">
+            <div class="filters__title-wrapper"> 
+              <legend class="filters__title-brand">Бренд</legend>
+              <button class="filters__title-clear" action="#">Очистить</button>
+            </div>
+            <div class="filters__search-wrapper"> 
+              <input class="filters__input" type="text" placeholder="Поиск" id="brand-name">
+              <svg class="filters__brand-search-icon" role="img" width="16" height="16" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#find-small"></use>
+              </svg>
+            </div>
+            <div class="filters__checkbox-container"> 
+              <label class="filters__checkbox-wrapper" for="brand1">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand1" value="Attr1" id="brand1" checked><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="brand2">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand2" value="Attr2" id="brand2"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="brand3">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand3" value="Attr3" id="brand3"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="brand4">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand4" value="Attr4" id="brand4"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="brand5">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand5" value="Attr5" id="brand5"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="brand6">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="brand6" value="Attr6" id="brand6"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filters__size">
+            <legend class="filters__title">Размер</legend>
+            <div class="filters__checkbox-container"> 
+              <label class="filters__checkbox-wrapper" for="size1">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size1" value="Attr1" id="size1"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="size2">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size2" value="Attr2" id="size2"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="size3">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size3" value="Attr3" id="size3"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="size4">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size4" value="Attr4" id="size4"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="size5">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size5" value="Attr5" id="size5"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+              <label class="filters__checkbox-wrapper" for="size6">
+                <input class="filters__checkbox page__hidden" type="checkbox" name="size6" value="Attr6" id="size6"><span class="filters__custom">
+                  <svg class="filters__tick" width="20" height="20" aria-hidden="true">
+                    <use href="img/stack.svg#checkbox"></use>
+                  </svg></span><span class="filters__checkbox-label">Атрибут</span><span class="filters__checkbox-quantity">3</span>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </aside>
+      <ul class="items">
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item--inactive">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Сообщить о поступлении</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+        <li class="items__item">
+          <div class="items__image-wrapper">
+            <svg class="items__item-icon" role="img" width="60" height="60" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#placeholder"></use>
+            </svg>
+            <div class="items__promo">
+              <p class="items__promo-header">Хит продаж</p>
+              <svg class="items__fire-icon" role="img" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <use href="img/stack.svg#fire"></use>
+              </svg>
+            </div>
+            <p class="items__sale">25%</p>
+          </div>
+          <p class="items__brand">Бренд</p>
+          <p class="items__name">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          <div class="items__price">
+            <p class="items__price-current">5 990 ₽</p>
+            <p class="items__price-before">5 990 ₽</p>
+          </div>
+          <button class="cta">Купить</button>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

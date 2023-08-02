@@ -1,0 +1,28 @@
+header.header
+	a._logo(href="index.html") Логотип
+		svg._logo-icon(role="img" width=24 height=24 aria-hidden="true" fill="currentColor")
+			use(href=`img/stack.svg#logo`)
+	a._catalog-cta(href="catalog.html") Каталог
+	form(action="#" method="post" target="_blank")._search
+		svg._search-icon(role="img" width=24 height=24 aria-hidden="true" fill="currentColor")
+			use(href=`img/stack.svg#find`) 
+		input(type="text" name="catalog" placeholder="Поиск по 100 000 товаров ")._search-input
+	ul._navigation
+		li._navigation-item
+			a._link(href="info.html") Информация о компании
+		li._navigation-item
+			a._link(href="contacts.html") Контакты	
+		li._navigation-item
+			a._link(href="links.html") Полезные ссылки
+
+	form._form-mobile(action="#" method="post" target="_blank")
+		button._return-mobile Вернуться назад
+			svg._return-icon(role="img" width=20 height=20 aria-hidden="true" fill="currentColor")
+				use(href=`img/stack.svg#back`)
+		input._input-mobile(type="text" name="catalog" placeholder="Запрос")
+		button._clear-mobile Стереть запрос
+			svg._clear-icon-mobile(role="img" width=20 height=20 aria-hidden="true" fill="currentColor")
+				use(href=`img/stack.svg#clear`)
+		button._search-mobile Найти
+	._navigation-mobile 
+		h3._category Название категории
